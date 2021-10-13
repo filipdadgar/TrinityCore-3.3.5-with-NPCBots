@@ -74,7 +74,7 @@ enum BotCommonValues
     POTION_CD                           = 60000,//default 60sec potion cd
     REGEN_CD                            = 1000, //update hp/mana every X milliseconds
 //COMMON TIMERS
-    ITEM_ENCHANTMENT_EXPIRE_TIMER       = 1 * HOUR * IN_MILLISECONDS,
+    ITEM_ENCHANTMENT_EXPIRE_TIMER       = 3600000, //1 Hour
 //COMMON GOSSIPS
     GOSSIP_NORMAL_SERVE_MASTER          = 70001,//"I live only to serve the master."
     GOSSIP_GREET_NEED_SMTH              = 70002,//"You need something?"

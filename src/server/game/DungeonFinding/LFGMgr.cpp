@@ -507,7 +507,7 @@ void LFGMgr::JoinLfg(Player* player, uint8 roles, LfgDungeonSet& dungeons, const
                             //}
 
                             ++memberCount;
-                            players.insert(bot->GetGUID());
+                            players.insert(itr->first);
                         }
                     }
                     //end npcbot
