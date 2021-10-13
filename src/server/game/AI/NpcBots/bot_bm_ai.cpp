@@ -222,7 +222,7 @@ public:
                 Creature* ill = ObjectAccessor::GetCreature(*me, *itr);
                 if (!ill)
                 {
-                    TC_LOG_ERROR("entities.player", "bm_bot::IllusionsCheck(): unit %u is not found in world!", (*itr).GetCounter());
+                    TC_LOG_ERROR("entities.player", "bm_bot::IllusionsCheck(): unit %s is not found in world!", (*itr).ToString().c_str());
                     continue;
                 }
 
