@@ -1,6 +1,9 @@
 #ifndef _BOTCOMMON_H
 #define _BOTCOMMON_H
 
+#include <utility>
+#include <vector>
+
 /*
 NpcBot System by Trickerer (onlysuffering@gmail.com)
 Original patch from: LordPsyan https://bitbucket.org/lordpsyan/trinitycore-patches/src/3b8b9072280e/Individual/11185-BOTS-NPCBots.patch
@@ -1015,7 +1018,7 @@ enum BotStatMods
     BOT_STAT_MOD_BLOCK_VALUE                = 48,
     //END ItemProtoType.h
 
-    BOT_STAT_MOD_DAMAGE_MIN                 = MAX_ITEM_MOD,
+    BOT_STAT_MOD_DAMAGE_MIN                 = BOT_STAT_MOD_BLOCK_VALUE + 1,
     BOT_STAT_MOD_DAMAGE_MAX,
     BOT_STAT_MOD_ARMOR,
     BOT_STAT_MOD_RESIST_HOLY,

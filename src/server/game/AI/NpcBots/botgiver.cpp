@@ -27,7 +27,7 @@ public:
     {
         bot_giver_AI(Creature* creature) : CreatureAI(creature) {}
 
-        void UpdateAI(uint32 /*diff*/) {}
+        void UpdateAI(uint32 /*diff*/) override {}
 
         bool OnGossipHello(Player* player) override
         {

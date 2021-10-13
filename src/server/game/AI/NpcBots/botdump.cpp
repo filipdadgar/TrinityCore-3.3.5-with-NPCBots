@@ -15,8 +15,6 @@
 #include "botdatamgr.h"
 #include "ObjectMgr.h"
 
-#include <fstream>
-
 class BotStringTransaction
 {
 public:

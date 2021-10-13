@@ -479,7 +479,7 @@ void LFGMgr::JoinLfg(Player* player, uint8 roles, LfgDungeonSet& dungeons, const
                     BotMap const* map = plrg->GetBotMgr()->GetBotMap();
                     for (BotMap::const_iterator itr = map->begin(); itr != map->end(); ++itr)
                     {
-                        if (!grp->IsMember(itr->second->GetGUID()))
+                        if (!grp->IsMember(itr->first))
                             continue;
 
                         //disabled in config
@@ -496,7 +496,7 @@ void LFGMgr::JoinLfg(Player* player, uint8 roles, LfgDungeonSet& dungeons, const
                             break;
                         }
 
-                        if (Creature* bot = ObjectAccessor::GetCreature(*plrg, itr->second->GetGUID()))
+                        if (Creature* bot = ObjectAccessor::GetCreature(*plrg, itr->first))
                         {
                             //if (!(bot->GetBotRoles() & ( 1 | 2 | 4 ))) //(BOT_ROLE_TANK | BOT_ROLE_DPS | BOT_ROLE_HEAL)
                             //{
@@ -632,7 +632,7 @@ void LFGMgr::JoinLfg(Player* player, uint8 roles, LfgDungeonSet& dungeons, const
                 BotMap const* map = plrg->GetBotMgr()->GetBotMap();
                 for (BotMap::const_iterator itr = map->begin(); itr != map->end(); ++itr)
                 {
-                    ObjectGuid bguid = itr->second->GetGUID();
+                    ObjectGuid bguid = itr->first;
                     if (players.find(bguid) == players.end() || !grp->IsMember(bguid))
                         continue;
 

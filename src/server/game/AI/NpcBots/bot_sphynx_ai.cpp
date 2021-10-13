@@ -558,19 +558,19 @@ public:
             }
         }
 
-        std::vector<uint32> const* GetDamagingSpellsList() const
+        std::vector<uint32> const* GetDamagingSpellsList() const override
         {
             return &Sphynx_spells_damage;
         }
-        //std::vector<uint32> const* GetCCSpellsList() const
+        //std::vector<uint32> const* GetCCSpellsList() const override
         //{
         //    return &Sphynx_spells_cc;
         //}
-        std::vector<uint32> const* GetHealingSpellsList() const
+        std::vector<uint32> const* GetHealingSpellsList() const override
         {
             return &Sphynx_spells_heal;
         }
-        std::vector<uint32> const* GetSupportSpellsList() const
+        std::vector<uint32> const* GetSupportSpellsList() const override
         {
             return &Sphynx_spells_support;
         }

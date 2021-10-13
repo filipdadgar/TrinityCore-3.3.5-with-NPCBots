@@ -2627,30 +2627,30 @@ public:
             }
             switch (ohEnchant)
             {
-                //case ROCKBITER_WEAPON_1:   textId1 = BOT_TEXT_"Rockbiter";  break;
-                case FLAMETONGUE_WEAPON_1: textId1 = BOT_TEXT_FLAMETONGUE;  break;
-                case FROSTBRAND_WEAPON_1:  textId1 = BOT_TEXT_FROSTBRAND;   break;
-                case WINDFURY_WEAPON_1:    textId1 = BOT_TEXT_WINDFURY;     break;
-                case EARTHLIVING_WEAPON_1: textId1 = BOT_TEXT_EARTHLIVING;  break;
+                //case ROCKBITER_WEAPON_1:   textId2 = BOT_TEXT_"Rockbiter";  break;
+                case FLAMETONGUE_WEAPON_1: textId2 = BOT_TEXT_FLAMETONGUE;  break;
+                case FROSTBRAND_WEAPON_1:  textId2 = BOT_TEXT_FROSTBRAND;   break;
+                case WINDFURY_WEAPON_1:    textId2 = BOT_TEXT_WINDFURY;     break;
+                case EARTHLIVING_WEAPON_1: textId2 = BOT_TEXT_EARTHLIVING;  break;
                 default:                   textId2 = BOT_TEXT_NOTHING_C;    break;
             }
             specList.push_back(LocalizedNpcText(player, BOT_TEXT_SLOT_MH) + ": " + LocalizedNpcText(player, textId1));
             specList.push_back(LocalizedNpcText(player, BOT_TEXT_SLOT_OH) + ": " + LocalizedNpcText(player, textId2));
         }
 
-        std::vector<uint32> const* GetDamagingSpellsList() const
+        std::vector<uint32> const* GetDamagingSpellsList() const override
         {
             return &Shaman_spells_damage;
         }
-        std::vector<uint32> const* GetCCSpellsList() const
+        std::vector<uint32> const* GetCCSpellsList() const override
         {
             return &Shaman_spells_cc;
         }
-        std::vector<uint32> const* GetHealingSpellsList() const
+        std::vector<uint32> const* GetHealingSpellsList() const override
         {
             return &Shaman_spells_heal;
         }
-        std::vector<uint32> const* GetSupportSpellsList() const
+        std::vector<uint32> const* GetSupportSpellsList() const override
         {
             return &Shaman_spells_support;
         }

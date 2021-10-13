@@ -6,6 +6,8 @@
 NpcBot Pet System by Trickerer (onlysuffering@gmail.com)
 */
 
+class Spell;
+
 class bot_pet_ai : public CreatureAI
 {
     public:
